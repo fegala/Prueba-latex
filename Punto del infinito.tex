@@ -1,0 +1,119 @@
+\documentclass[12p]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{graphicx}
+
+\begin{document}
+\begin{titlepage}
+\title{Límites y el punto del infinito}
+\author{Fernando Garza Landa}
+\maketitle
+\vfill
+\end{titlepage}
+
+\begin{abstract}
+Nota: El punto del infinito puede estudiarse dentro del plano real o dentro del plano complejo, en este trabajo, nos enfocaremos al concepto relacionado con el plano complejo tocando solo ligeramente su uso en el plano real.
+
+Dentro de los límites, podemos encontrar el concepto de "punto del infinito" denotado por $\infty$, el cual vuelve al plano complejo un \textit{plano complejo extendido}. Este trabajo nos ayudará a entender mejor de qué trata este tema, extraído del capitulo 13 del libro \textit{Variable compleja y aplicaciones} de \textsc{Ruel V. Churchill}
+\end{abstract}
+\vspace{1cm}
+\tableofcontents
+\vspace{.5cm}
+\listoffigures
+
+\newpage
+
+\section{Representación}
+La manera más común de visualizar el punto del infinito es considerando una esfera unidad llamada \textit{Esfera de Riemann} cuyo centro z=0 y ecuador es atravesado por el plano complejo. 
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=250pt]{esfera.png}\\
+\caption{Esfera de Riemann}
+\label{fig:figura1}
+\end{center}
+\end{figure}
+
+A cada punto \textbf{P} de la superficie de esta esfera le corresponderá (conocida como \textit{proyección estereográfica}) un punto \textbf{z} del plano, donde el punto \textbf{P} se determina por la intersección de la recta que pasa por el polo norte \textbf{N} y el punto \textbf{z}. "De forma análoga, cada P sobre la esfera, excepto el polo norte N, corresponde exactamente a un punto \textbf{z} del plano. Haciendo corresponder el polo norte N al punto del infinito" \cite{1}, dando una correspondencia uno a uno entre los puntos \textbf{P} y \textbf{z} del plano complejo extendido.
+
+\subsection{Esfera de Riemann}
+Profundizando un poco en el concepto de la $"$Esfera de Riemann$"$ encontramos que la esfera es la representación geométrica de los \textbf{números complejos extendidos}, la cual consiste en los números complejos ordinarios en conjunción con el símbolo $\infty$ para representar el infinito.
+
+Una ventaja de usar estos numeros complejos extendidos es la de permitir la división por cero en algunas circunstancias, obteniendo algo como $1/0=\infty$
+
+\subsection{En el plano real}
+Dentro del conjunto de los números reales el punto del infinito es una entidad topológica y geométrica que se introduce a modo de cierra o \textit{frontera infinita}.
+
+Agregando el punto del infinito a la recta real, genera una curva cerrada conocida como \textbf{Recta proyectiva real}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=70pt]{real.png}\\
+\caption{Recta proyectiva real}
+\label{fig:figura2}
+\end{center}
+\end{figure}
+
+\section{Desarrollo}
+Para cada $\varepsilon$ positivo pequeño, aquellos puntos del plano complejo exteriores al círculo $|$z$|$=1/$\varepsilon$ corresponden a puntos de la esfera próximos al N. Llamamos al conjunto $|$z$|$ $>$ 1/$\varepsilon$ un entorno de $\infty$.
+
+Tenemos la afirmación:
+\[
+\lim_{z\rightarrow z_0}f(z)=w_0
+\]
+
+Si $z_0$ y/o $w_0$ son sustituidos por el punto del infinito, la afirmación queda como:
+
+\[
+\lim_{z\rightarrow z_0}f(z)=\infty
+\]
+
+
+
+Finalmente tenemos que
+
+\[\lim_{z\rightarrow z_0}f(z)=\infty \quad \textbf{si y sólo sí} \quad \lim_{z\rightarrow z_0}\frac{1}{f(z)}=0
+\]
+
+\vspace{1cm}
+\section{Ejemplos}
+\subsection{Ejemplo 1}
+\cite{2} Nótese que
+
+\[\lim_{z\rightarrow -1} \frac{iz + 3}{z + 1}= \infty \quad \textbf{ya que} \quad \lim_{z\rightarrow -1}\frac{z + 1}{iz + 3}=0
+\]
+
+Si
+
+\[
+\lim_{z\rightarrow \infty}f(z)=w_0
+\]
+
+entonces, $\forall \enskip \varepsilon$ positivo $\exists$ un $\delta$ positivo tal que
+
+\begin{equation}
+|f(z) - w_0| < \varepsilon \quad \textbf{siempre que} \quad |z|>\frac{1}{\delta}
+\end{equation}
+
+Luego
+
+\begin{equation}
+\lim_{z\rightarrow \infty}f(z)=w_0 \quad \textbf{si y solo si} \quad \lim_{z\rightarrow 0}f(\frac{1}{z})=w_0
+\end{equation}
+\vspace{.5cm}
+\subsection{Ejemplo 2}
+Por (2)
+ 
+ \[\lim_{z\rightarrow \infty} \frac{2z + i}{z + 1}= 2 \quad \textbf{ya que} \quad \lim_{z\rightarrow 0}\frac{(2/z) + i}{(1/z) + 1}= \lim_{z\rightarrow 0}\frac{2 + iz}{1 + z} = 2
+\]
+
+
+\vspace{8 cm}
+
+
+
+\begin{thebibliography}{x}
+\bibitem{1} \textsc{Ruel V. Churchill}, \textsc{James Ward Brown}, \textit{Variable compleja y aplicaciones}, \textit{5ta ed.} \textbf{Pag.44}
+\bibitem{2} \textsc{Ruel V. Churchill}, \textsc{James Ward Brown}, \textit{Variable compleja y aplicaciones}, \textit{5ta ed.} \textbf{Pag.45,46}
+\end{thebibliography}
+\end{document}					
